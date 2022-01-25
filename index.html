@@ -1,0 +1,314 @@
+<!doctype html>
+<html>
+
+<head>
+
+	<link rel="icon" 
+      type="image/png" 
+      href="graphics/tt/favicon-16x16.png"
+	  sizes="16x16">
+	<link rel="icon" 
+	      type="image/png" 
+	      href="graphics/tt/favicon-32x32.png"
+		  sizes="32x32">
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-47882935-5"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-47882935-5');
+	</script>
+
+	<!-- longitude -->
+	<script src="https://lngtd.com/bonk.js"></script>
+
+
+	<meta charset="utf-8">
+	<title>bonk.io - Official Site: Play Bonk Here!</title>
+
+	<link rel="preload" href="fonts/fptmed.otf" as="font" crossorigin="anonymous" />
+	<link rel="preload" href="fonts/fptbook.otf" as="font" crossorigin="anonymous" />
+	<link rel="preload" href="fonts/fptbook_fixed_5.otf" as="font" crossorigin="anonymous" />
+	<link rel="preload" href="fonts/fptb.otf" as="font" crossorigin="anonymous" />
+
+
+	
+
+
+
+</head>
+
+
+
+
+
+<!-- debug  OLD POSTION! -->
+
+
+
+<!-- debug -->
+
+
+
+
+<link rel="stylesheet" type="text/css" href="css/roomlist.css">
+<link rel="stylesheet" type="text/css" href="css/checkbox.css">
+<link rel="stylesheet" type="text/css" href="css/maploadwindow.css">
+<link rel="stylesheet" type="text/css" href="css/leveleditor.css">
+<link rel="stylesheet" type="text/css" href="css/newbonklobby.css">
+<link rel="stylesheet" type="text/css" href="css/ingamechat.css">
+<link rel="stylesheet" type="text/css" href="css/simplemenu.css">
+<link rel="stylesheet" type="text/css" href="css/pagelayout.css">
+<link rel="stylesheet" type="text/css" href="css/skineditor.css">
+<link rel="stylesheet" type="text/css" href="css/mapeditor.css">
+<link rel="stylesheet" type="text/css" href="css/prettymenu.css">
+<link rel="stylesheet" type="text/css" href="css/classicactive.css" id="classicoverridecss">
+
+<link href="js/colorpicker/color-picker.css" rel="stylesheet">
+
+
+
+
+
+<body>
+
+
+
+
+
+<style>
+	
+
+	@font-face {
+	  font-family: futurept_light;
+	  src: url(fonts/fptl.otf);
+	}
+	@font-face {
+	  font-family: futurept_book;
+	  src: url(fonts/fptbook.otf);
+	}
+	@font-face {
+	  font-family: futurept_demi;
+	  src: url(fonts/futurapt_demi.otf);
+	}
+	@font-face {
+	  font-family: futurept_medium;
+	  src: url(fonts/fptmed.otf);
+	}
+	@font-face{
+		font-family: futurept_b1;
+		src: url(fonts/futurept_7a255.otf);
+	}
+	@font-face{
+		font-family: futurept_bold;
+		src: url(fonts/fptb.otf);
+	}
+	@font-face {
+	  font-family: futurept_demi_oblique;
+	  src: url(fonts/fptdo.otf);
+	}
+
+	@font-face {
+	  font-family: futurept_medium_oblique;
+	  src: url(fonts/fptmo.otf);
+	}
+
+	
+
+
+
+
+	#bgreplay{
+		width:100%;
+		height:100%;
+		overflow: hidden;
+		position: absolute;
+		top:0;
+	}
+
+	#gamerenderer{
+
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top:0px;
+		left:0px;
+
+		margin: auto;
+		overflow: hidden;
+		visibility: hidden;
+	}
+
+	#r3dcanvas{
+		position : absolute;
+		left: 50%;
+		top: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		-moz-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+	}
+
+	#gamethumbbox {
+
+		width: 150px;
+		display: inline-block;
+		text-align: center;
+		text-decoration: none;
+		color:#ffffff;
+		text-shadow: 1px 1px 3px #000000;
+		font-family: Tahoma, Geneva, sans-serif;
+    	font-size: 13px;
+
+	}
+
+	#gamethumbbox a, a:visited{
+
+		text-decoration: none;
+		color: #ffffff; 
+
+	}
+
+	#gamethumbbox img { 
+		border: 3px solid #222644; 
+	}
+
+	.thumbbox_name{
+		display: block;
+    	margin-top: -17px;
+	}
+	.thumbbox_count{
+		margin-top: -15px;
+    	display: block;
+	}
+
+
+
+	@-webkit-keyframes shakeanim {
+		0% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
+		10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
+		20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); }
+		30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
+		40% { -webkit-transform: translate(1px, -1px) rotate(1deg); }
+		50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
+		60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); }
+		70% { -webkit-transform: translate(2px, 1px) rotate(-1deg); }
+		80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
+		90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+		100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
+	}
+	.shake:hover,
+	.shake:focus {
+		-webkit-animation-name: shakeanim;
+		-webkit-animation-duration: 0.4s;
+		-webkit-transform-origin:50% 50%;
+		-webkit-animation-iteration-count: infinite;
+		-webkit-animation-timing-function: linear;
+	}
+	.shake {
+		display:inline-block
+	}
+
+</style>
+
+<div id="bonkioheader">
+	
+	<div id="gamethumbbox">
+		<a href="index.html" target="blank">
+			<img src="graphics/tt/bonkgameicon3.png" class="shake">
+			<span class="thumbbox_name">bonk.io</span>
+			<span id="header_bonk_playercount" class="thumbbox_count">(? online)</span>
+		</a>
+	</div>
+	<div id="gamethumbbox">
+		<a href="https://supercarstadium.com/" target="blank">
+			<img src="graphics/tt/caricon.png" class="shake">
+			<span class="thumbbox_name">Supercar Stadium</span>
+			<span id="header_car_playercount" class="thumbbox_count">(? online)</span>
+		</a>
+	</div>
+	<div id="bonkiobugemail">
+		issues? <a href="cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="7d1f081a0e3d1f121316531412">[email&#160;protected]</a>
+	</div>
+</div>
+
+<iframe id="maingameframe" src="gameframe-release.html"></iframe>
+
+
+<div id="adboxverticalleftCurse">
+	<div id='bonk_d_1'></div><!-- longitude square ad-->
+</div>
+  
+<div id="adboxverticalCurse">
+	<div id='bonk_d_2'></div><!-- longitude square ad -->
+</div>
+
+
+
+
+	
+	
+
+
+
+<div id="descriptioncontainer">
+
+	<div id="descriptioninner">
+
+		<p class="descriptiontitle">Welcome to Bounce Client!</p>
+
+		<p class="descriptionsubtitle">What is this?</p>
+
+			<img src="graphics/tt/bonkthumb1.jpg" class="descriptionthumbl">
+
+			<p class="descriptionpara">Bonk is a multiplayer physics game, for up to eight players at once. Push your opponents off the edge of the level, the last man standing wins!</p>
+
+			<p class="descriptionpara">Battle your friends or anyone from anywhere in the world in last man standing or team based matches. Bonk.io is a game of strategy as well as raw skill, position yourself carefully, and dodging an incoming collision can be as effective as smashing into your enemies!</p>
+
+			<img src="graphics/tt/bonkthumb2.jpg" class="descriptionthumbr">
+
+			<p class="descriptionpara">Use the arrow keys to move, and hold X to make yourself heavier. When you are heavy, you have much more momentum, so you will bash enemies much further, and you are much harder to push around. But you will also be much less maneuverable!</p>
+
+
+
+			<p class="descriptionpara">Use the in-game level editor to easily create your own maps, and then play on them! Play on <strike>hundreds</strike> millions of custom maps created by the community, and upload your own for others to play on.</p>
+
+			<p class="descriptionpara">Use the quick play feature to quickly get into a game, or create custom games and set it up however you like.</p>
+
+			<p class="descriptionpara">Bonkio is being constantly updated with new features and improvements, so check back often! And most of all - have fun!</p>
+
+	</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+
+
+
+
+
+
+
+
+</html>
